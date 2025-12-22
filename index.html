@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!--Landing Page-->
+    <section id="landing">
+        <h1 style="color: #ffe0c0; font: 3em sans-serif; font-weight: 600;">Tic-Tac-Toe</h1>
+        <p class="tagline">Think smart. Play bold. Win the grid.</p>
+        <button onclick="showMode()">Play Now</button>
+    </section>
+
+
+    <!--Mode Selection-->
+    <section id="mode" class="hidden">
+        <h2 style="font-size: 1.8em; color: #ffeefe;">Choose Game Mode</h2>
+        <div class="options">
+            <button onclick="selectMode('human')">Play Against Human</button>
+            <button onclick="selectMode('computer')">Play Against Computer</button>
+            <button onclick="goHome()">🏠 Home</button>
+        </div>
+    </section>
+
+
+    <!--Player Details-->
+    <section id="players" class="hidden">
+        <h2>Enter Player Details</h2>
+        <input type="text" id="player1" placeholder="Player-1 Name">
+        <input type="text" id="player2" placeholder="Player-2 Name">
+        <button onclick="startGame()">Start Game</button>
+        <button onclick="goHome()">🏠 Home</button>
+    </section>
+
+
+    <!--Game Board-->
+    <section id="game" class="hidden">
+        <div class="board">
+            <h2 id="status"></h2>
+            <div class="gameBoard">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+        </div>
+        <div id="overlay" class="hidden">
+            <div id="overlayText"></div>
+        </div>
+        <button onclick="restartGame()">Restart Game</button>
+        <button onclick="goHome()">🏠 Home</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
